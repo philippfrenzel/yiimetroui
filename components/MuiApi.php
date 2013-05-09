@@ -3,7 +3,7 @@
 /**
 * MuiApi class file.
 * @author Philipp Frenzel <philipp@frenzel.net>
-* @copyright Copyright &copy; Philipp Frenzel 2013-
+* @copyright Copyright &copy; Philipp Frenzel 2013
 * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
 * @package metroui.components
 * @version 1.0.0
