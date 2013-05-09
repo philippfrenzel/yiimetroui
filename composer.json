@@ -1,0 +1,14 @@
+{
+    "name": "philippfrenzel/yiimetroui",
+    "description": "MetroUI and Bootstrap for the Yii2 PHP framework.",
+    "keywords": ["metroui","bootstrap", "yii2"],
+    "type": "yii-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Philipp Frenzel",
+            "email": "Philipp@Frenzel.net",
+            "homepage": "http://www.frenzel.net/"
+        }
+    ]
+}
