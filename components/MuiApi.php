@@ -13,7 +13,7 @@ namespace vendor\yiiext\metroui\components;
 
 use Yii;
 use yii\base\Component;
-use yii\helpers\Html;
+use yii\web\AssetBundle;
 
 /**
 * MetroUI API component.
@@ -28,6 +28,19 @@ class MuiApi extents Component{
 	private $_assetsUrl;
 
 	/**
+	* @var array this contains the complete bundle for passing over to the assetmanager
+	*/
+	private $_bundle = array(
+ 	    'metroui' => array(
+	        'basePath' => '@wwwroot',
+	        'baseUrl' => '@www',
+	        'depends' => array(
+	            'yii',
+	        ),
+	    ),
+	);
+
+	/**
 	* Registers the MetroUI CSS.
 	* @param string $url the URL to the CSS file to register.
 	*/
@@ -35,10 +48,10 @@ class MuiApi extents Component{
 	{
 		if ($url === null)
 		{
-			$fileName = YII_DEBUG ? 'modern.css' : 'modern.min.css';
+			$fileName = YII_DEBUG ? 'modern.css' : 'modern.css';
 			$url = $this->getAssetsUrl() . '/css/' . $fileName;
 		}
-		Yii::app()->clientScript->registerCssFile($url);
+		$this->_bundle['css'][] = $url;
 	}
 
 }
