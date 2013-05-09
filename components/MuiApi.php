@@ -14,6 +14,7 @@ namespace vendor\yiiext\metroui\components;
 use Yii;
 use yii\base\Component;
 use yii\web\AssetBundle;
+use yii\helpers\Html;
 
 /**
 * MetroUI API component.
@@ -52,6 +53,38 @@ class MuiApi extents Component{
 			$url = $this->getAssetsUrl() . '/css/' . $fileName;
 		}
 		$this->_bundle['css'][] = $url;
+	}
+
+	/**
+	* Registers the responsive MetroUI CSS.
+	* @param string $url the URL to the CSS file to register.
+	*/
+	public function registerResponsiveCss($url = null)
+	{
+		if ($url === null)
+		{
+			$fileName = YII_DEBUG ? 'modern-responsive.css' : 'modern-responsive.css';
+			$url = $this->getAssetsUrl() . '/css/' . $fileName;
+		}
+
+		/** @var HTML::tag $header contains the meta tag for displaying responsive */
+
+		$header = HTML::tag('meta','',array(
+			'width'=>'device-width',
+			'initial-scale'=>'1.0', 
+			'viewport'
+			)
+		);
+		Yii::app()->head()->addTag($header);
+		$this->_bundle['css'][] = $url;
+	}
+
+	/**
+	* Registers all assets.
+	*/
+	public function register()
+	{
+		$this->registerAssetBundle($this->_bundle);		
 	}
 
 }
