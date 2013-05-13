@@ -87,4 +87,27 @@ class MuiApi extents Component{
 		$this->registerAssetBundle($this->_bundle);		
 	}
 
+	/**
+	* Registers the named asset bundle.
+	* All dependent asset bundles will be registered.
+	* @param string $name the name of the asset bundle.
+	* @throws InvalidConfigException if the asset bundle does not exist or a circular dependency is detected
+	*/
+	public function registerAssetBundle($name)
+	{
+		if (!isset($this->assetBundles[$name])) {
+			$am = $this->getAssetManager();
+			$bundle = $am->getBundle($name);
+			if ($bundle !== null) {
+				$this->assetBundles[$name] = false;
+				$bundle->registerAssets($this);
+				$this->assetBundles[$name] = true;
+			} else {
+				throw new InvalidConfigException("Unknown asset bundle: $name");
+			}
+		} elseif ($this->assetBundles[$name] === false) {
+			throw new InvalidConfigException("A circular dependency is detected for bundle '$name'.");
+		}
+	}
+
 }
