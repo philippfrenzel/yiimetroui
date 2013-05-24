@@ -1,7 +1,7 @@
 <?php
  
  /**
- * This class is merely used to publish assets that are needed by all dhtmlx
+ * This class is merely used to publish assets that are needed by all yiimetroui
  * widgets and thus have to be imported before any widget gets rendered.
  * @copyright Frenzel GmbH - www.frenzel.net
  * @link http://www.frenzel.net
@@ -10,16 +10,16 @@
 
 namespace yiimetroui;
 
-use Yii;
-use yii\base\View;
-use yii\helpers\Json;
+use \Yii;
+use \yii\base\View;
+use \yii\helpers\Json;
 
 class Widget extends yii\base\Widget
 {
 	/**
-	 * @var string the dhtmlx theme bundle.
+	 * @var string the yiimetroui theme bundle.
 	 */
-	//public static $theme = 'yiiext/dhtmlx/theme/dhx_web';
+	//public static $theme = 'yiiext/yiimetroui/theme/dhx_web';
 	/**
 	 * @var array the HTML attributes for the widget container tag.
 	 */
