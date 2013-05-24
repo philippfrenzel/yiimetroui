@@ -1,14 +1,26 @@
 {
     "name": "philippfrenzel/yiimetroui",
-    "description": "MetroUI and Bootstrap for the Yii2 PHP framework.",
-    "keywords": ["metroui","bootstrap", "yii2"],
-    "type": "yii-extension",
+    "description": "Yii2 DHTMLX Widgets",
+    "keywords": ["yii", "framework","metroui"],
+    "homepage": ["http://www.frenzel.net/","http://www.dhtmlx.com"],
+    "type": "library",
     "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Philipp Frenzel",
-            "email": "Philipp@Frenzel.net",
-            "homepage": "http://www.frenzel.net/"
+            "email": "philipp@frenzel.net",
+            "homepage": "http://www.frenzel.net/",
+            "role": "Project lead"
         }
-    ]
+    ],
+    "support": {
+        "source": "https://github.com/philippfrenzel/yiimetroui"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-0": { "yiimetroui\\": "/" }
+    }
 }
