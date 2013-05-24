@@ -10,6 +10,8 @@
 
 namespace yiimetroui;
 
+use yiimetroui\MetroUIWidget;
+
 use yii\base\InvalidConfigException;
 use yii\helpers\base\ArrayHelper;
 use yii\helpers\Html;
