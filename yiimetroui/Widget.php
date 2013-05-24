@@ -10,9 +10,9 @@
 
 namespace yiimetroui;
 
-use \Yii;
-use \yii\base\View;
-use \yii\helpers\Json;
+use Yii;
+use yii\base\View;
+use yii\helpers\Json;
 
 class Widget extends yii\base\Widget
 {
