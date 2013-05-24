@@ -13,8 +13,9 @@ namespace yiimetroui;
 use Yii;
 use yii\base\View;
 use yii\helpers\Json;
+use yii\base\Widget;
 
-class Widget extends yii\base\Widget
+class MetroUIWidget extends Widget
 {
 	/**
 	 * @var string the yiimetroui theme bundle.

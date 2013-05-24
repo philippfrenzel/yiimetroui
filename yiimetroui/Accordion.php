@@ -39,7 +39,7 @@ use yii\helpers\Html;
  * ```
  *
  */
-class Accordion extends Widget
+class Accordion extends MetroUIWidget
 {
 	/**
 	 * @var array list of groups in the Accordion widget. Each array element represents a single
