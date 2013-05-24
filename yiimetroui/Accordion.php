@@ -10,8 +10,6 @@
 
 namespace yiimetroui;
 
-use yiimetroui\MetroUIWidget;
-
 use yii\base\InvalidConfigException;
 use yii\helpers\base\ArrayHelper;
 use yii\helpers\Html;
@@ -41,7 +39,7 @@ use yii\helpers\Html;
  * ```
  *
  */
-class Accordion extends MetroUIWidget
+class Accordion extends Widget
 {
 	/**
 	 * @var array list of groups in the Accordion widget. Each array element represents a single
