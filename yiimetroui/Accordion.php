@@ -68,8 +68,9 @@ class Accordion extends Widget
 	 */
 	public function init()
 	{
-		parent::init();		
-		$this->addCssClass(ArrayHelper::merge($this->options,array('data-role'=>'accordion')), 'accordion');
+		parent::init();
+		$this->options=ArrayHelper::merge($this->options,array('data-role'=>'accordion'));		
+		$this->addCssClass($this->options, 'accordion');
 	}
 
 	/**
