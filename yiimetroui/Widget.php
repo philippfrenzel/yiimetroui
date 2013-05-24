@@ -19,7 +19,7 @@ class Widget extends yii\base\Widget
 	/**
 	 * @var string the yiimetroui theme bundle.
 	 */
-	//public static $theme = 'yiiext/yiimetroui/theme/dhx_web';
+	public static $theme = NULL;
 	/**
 	 * @var array the HTML attributes for the widget container tag.
 	 */
