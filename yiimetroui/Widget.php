@@ -13,8 +13,9 @@ namespace yiimetroui;
 use Yii;
 use yii\base\View;
 use yii\helpers\Json;
+use yii\base\Widget as BaseWidget;
 
-class Widget extends yii\base\Widget
+class Widget extends BaseWidget
 {
 	/**
 	 * @var string the yiimetroui theme bundle.
