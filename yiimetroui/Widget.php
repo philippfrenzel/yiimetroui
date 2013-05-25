@@ -63,12 +63,6 @@ class Widget extends BaseWidget
 		$view = $this->getView();
 		$view->registerAssetBundle("yiimetroui/$name");
 		
-		if ($this->clientOptions !== false) {
-			$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);
-			$js = "jQuery('#$id').$name($options);";
-			$view->registerJs($js);
-		}
-
 		if (!empty($this->clientEvents)) {
 			$js = array();
 			foreach ($this->clientEvents as $event => $handler) {
