@@ -112,7 +112,7 @@ class Tabs extends Widget
 			$options = ArrayHelper::getValue($item, 'options', array());
 			$id = isset($options['id']) ? $options['id'] : $this->options['id'] . '-frame' . $n;
 			$headerOptions = ArrayHelper::getValue($item, 'headerOptions', array());
-			if($n==1)
+			if($n==0)
 				$headerOptions = ArrayHelper::merge($options,array('class'=>'frame active'));
 			$headers[] = Html::tag('li', Html::a($item['header'], "#$id"), $headerOptions);
 		}
@@ -136,7 +136,7 @@ class Tabs extends Widget
 			if (!isset($options['id'])) {
 				$options['id'] = $this->options['id'] . '-frame' . $n;
 			}
-			if($n==1)
+			if($n==0)
 				$options = ArrayHelper::merge($options,array('class'=>'frame active'));
 			else
 				$options = ArrayHelper::merge($options,array('class'=>'frame'));
