@@ -144,11 +144,11 @@ class Carousel extends Widget
 	public function renderControls()
 	{
 		if (isset($this->controls[0], $this->controls[1])) {
-			return Html::tag('div',$this->controls[0], array(
+			return Html::tag('span',$this->controls[0], array(
 				'class' => 'control left',
 				'id' => '#' . $this->options['id'],				
 			)) . "\n"
-			. Html::tag('div',$this->controls[1], array(
+			. Html::tag('span',$this->controls[1], array(
 				'class' => 'control right',
 				'id' => '#' . $this->options['id'],				
 			));
