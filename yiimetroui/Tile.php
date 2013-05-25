@@ -21,7 +21,7 @@ use yii\helpers\Html;
  *
  * ```php
  * echo Tile::widget(array(
- *     'items' => array(
+ *     'items' => 
  *         // equivalent to the above
  *         array(
  *             'content' => 'Anim pariatur cliche...',
@@ -30,7 +30,7 @@ use yii\helpers\Html;
  *             'contentOptions' => array('class'=>'in')
  *         ),
  *         // another group item
- *         'Collapsible Group Item #2' => array(
+ *         array(
  *             'content' => 'Anim pariatur cliche...',
  *             'contentOptions' => array(...),
  *             'options' => array(...),
@@ -90,10 +90,10 @@ class Tile extends Widget
 	{
 		$items = array();
 		$index = 0;
-		foreach ($this->items as $header => $item) {
+		for ($i = 0, $count = count($this->items); $i < $count; $i++) {
 			$options = ArrayHelper::getValue($item, 'options', array());
 			$this->addCssClass($options, 'tile-content');
-			$items[] = Html::tag('div', $this->renderItem($header, $item, ++$index), $options);
+			$items[] = Html::tag('div', $this->renderItem($this->items[$i], $i), $options);
 		}
 
 		return implode("\n", $items);
@@ -107,13 +107,13 @@ class Tile extends Widget
 	 * @return string the rendering result
 	 * @throws InvalidConfigException
 	 */
-	public function renderItem($header, $item, $index)
+	public function renderItem($item, $index)
 	{
 		if (isset($item['content'])) {
 			$id = $this->options['id'] . '-tile' . $index;
 			$options = ArrayHelper::getValue($item, 'contentOptions', array());
 			$options['id'] = $id;
-			$content = Html::tag('div', $item['content'], array($options)) . "\n";
+			$content = Html::tag('div', $item['content'], $options) . "\n";
 		} else {
 			throw new InvalidConfigException('The "content" option is required.');
 		}
