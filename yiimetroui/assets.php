@@ -34,5 +34,12 @@ return array(
 			'js/pagecontrol.js',
 		),
 		'depends' => array('yiimetroui','yii'),
+	),
+	'yiimetroui/tile' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/tile-drag.js',
+		),
+		'depends' => array('yiimetroui','yii'),
 	)
 );
