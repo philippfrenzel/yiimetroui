@@ -15,7 +15,7 @@
         }
     ],
     "support": {
-        "source": "https://github.com/philippfrenzel/yiimetroui",        
+        "source": "https://github.com/philippfrenzel/yiimetroui"        
     },
     "minimum-stability": "dev",
     "require": {
