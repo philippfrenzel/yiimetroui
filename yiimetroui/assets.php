@@ -10,7 +10,7 @@ return array(
 	'yiimetroui/responsive' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'css' => array(
-			'css/modern-responsive.css',
+			//'css/modern-responsive.css', //uncomment this, if you don't use the modern.css already in your allication
 		),
 		'depends' => array('yiimetroui'),
 	),
