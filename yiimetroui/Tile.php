@@ -21,7 +21,7 @@ use yii\helpers\Html;
  *
  * ```php
  * echo Tile::widget(array(
- *     'items' => array(
+ *     'items' => 
  *         // equivalent to the above
  *         array(
  *             'content' => 'Anim pariatur cliche...',
@@ -30,7 +30,7 @@ use yii\helpers\Html;
  *             'contentOptions' => array('class'=>'in')
  *         ),
  *         // another group item
- *         'Collapsible Group Item #2' => array(
+ *         array(
  *             'content' => 'Anim pariatur cliche...',
  *             'contentOptions' => array(...),
  *             'options' => array(...),
