@@ -43,6 +43,14 @@ Add the sources to your composer.json > repositories file:
 
 Package is although registered at packagist.org - so you can just add one line of code, to let it run!
 
+```json
+"require": {
+        "yiisoft/yii2": "dev-master",
+        "yiisoft/yii2-composer":"dev-master",
+        "philippfrenzel/yiimetroui":"*"
+},
+```
+
 MetroUI already loaded?
 - As I use assetparser extension to parse the less files into my distribution, i commented the assets.php to avoid static css loading. If you need the css-files to be loaded statically, pls. uncomment the entries!
 
