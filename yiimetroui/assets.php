@@ -20,5 +20,12 @@ return array(
 			'js/carousel.js',
 		),
 		'depends' => array('yiimetroui'),
+	),
+	'yiimetroui/accordion' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/accordion.js',
+		),
+		'depends' => array('yiimetroui'),
 	)
 );
