@@ -61,6 +61,7 @@ class Widget extends BaseWidget
 	{
 		$id = $this->options['id'];
 		$view = $this->getView();
+		$view->registerAssetBundle("yiimetroui/$name");
 		
 		if ($this->clientOptions !== false) {
 			$options = empty($this->clientOptions) ? '' : Json::encode($this->clientOptions);

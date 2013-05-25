@@ -1,17 +1,24 @@
 <?php
 
 return array(
-	'yiiext/metroui' => array(
+	'yiimetroui' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'css' => array(
 			'css/modern.css',
 		),
 	),
-	'yiiext/metroui/responsive' => array(
+	'yiimetroui/responsive' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'css' => array(
 			'css/modern-responsive.css',
 		),
-		'depends' => array('yiiext/modern'),
+		'depends' => array('yiimetroui'),
+	),
+	'yiimetroui/carousel' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/carousel.js',
+		),
+		'depends' => array('yiimetroui'),
 	)
 );
