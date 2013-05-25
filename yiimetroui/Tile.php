@@ -90,10 +90,10 @@ class Tile extends Widget
 	{
 		$items = array();
 		$index = 0;
-		foreach ($this->items as $header => $item) {
+		for ($i = 0, $count = count($this->items); $i < $count; $i++) {
 			$options = ArrayHelper::getValue($item, 'options', array());
 			$this->addCssClass($options, 'tile-content');
-			$items[] = Html::tag('div', $this->renderItem($header, $item, ++$index), $options);
+			$items[] = Html::tag('div', $this->renderItem($this->items[$i], $i), $options);
 		}
 
 		return implode("\n", $items);
@@ -107,7 +107,7 @@ class Tile extends Widget
 	 * @return string the rendering result
 	 * @throws InvalidConfigException
 	 */
-	public function renderItem($header, $item, $index)
+	public function renderItem($item, $index)
 	{
 		if (isset($item['content'])) {
 			$id = $this->options['id'] . '-tile' . $index;
