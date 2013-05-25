@@ -109,6 +109,8 @@ Put the code below into your view file and enjoy it!
 attention, to make it more simple, always the first tab will be showed on "startup"
 
 ```php
+use yiimetroui\Tabs;
+
 echo Tabs::widget(array(
      'items' => array(
          array(
