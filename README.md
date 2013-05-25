@@ -57,7 +57,7 @@ MetroUI already loaded?
 Add the following line to your index.php in /www
 
 ```php
-Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/yiiext/yiimetroui/yiimetroui/');
+Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/philippfrenzel/yiimetroui/yiimetroui/');
 ```
 
 USAGE
