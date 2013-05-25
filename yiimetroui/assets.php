@@ -27,5 +27,12 @@ return array(
 			'js/accordion.js',
 		),
 		'depends' => array('yiimetroui','yii'),
+	),
+	'yiimetroui/tabs' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/pagecontrol.js',
+		),
+		'depends' => array('yiimetroui','yii'),
 	)
 );
