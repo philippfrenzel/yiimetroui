@@ -109,7 +109,7 @@ class Accordion extends Widget
 	public function renderItem($header, $item, $index)
 	{
 		if (isset($item['content'])) {
-			$id = $this->options['id'] . '-Accordion' . $index;
+			$id = $this->options['id'] . '-accordion' . $index;
 			$options = ArrayHelper::getValue($item, 'contentOptions', array());
 			$options['id'] = $id;
 			$this->addCssClass($options, 'accordion-body Accordion');

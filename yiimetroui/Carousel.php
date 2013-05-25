@@ -132,10 +132,7 @@ class Carousel extends Widget
 			throw new InvalidConfigException('The "content" option is required.');
 		}
 
-		$this->addCssClass($options, 'item');
-		if ($index === 0) {
-			$this->addCssClass($options, 'active');
-		}
+		$this->addCssClass($options, 'slide image');
 
 		return Html::tag('div', $content . "\n" . $caption, $options);
 	}
