@@ -45,8 +45,10 @@ MetroUI already loaded?
 - As I use assetparser extension to parse the less files into my distribution, i commented the assets.php to avoid static css loading. If you need the css-files to be loaded statically, pls. uncomment the entries!
 
 Add the following line to your index.php in /www
-Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/yiiext/yiimetroui/yiimetroui/');
 
+```php
+Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/yiiext/yiimetroui/yiimetroui/');
+```
 
 USAGE
 =====
