@@ -7,7 +7,7 @@
  * @author Philipp Frenzel <philipp@frenzel.net>
  */
 
-namespace yii\bootstrap;
+namespace yiimetroui;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\base\ArrayHelper;
