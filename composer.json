@@ -14,13 +14,13 @@
         }
     ],
     "support": {
-        "source": "https://github.com/philippfrenzel/yiimetroui",
-        "autoload": {
-            "psr-0": { "yiimetroui\\": "/" }
-        }
+        "source": "https://github.com/philippfrenzel/yiimetroui",        
     },
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-0": { "yiimetroui\\": "/" }
     }
 }
