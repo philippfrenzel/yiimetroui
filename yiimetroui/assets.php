@@ -19,13 +19,13 @@ return array(
 		'js' => array(
 			'js/carousel.js',
 		),
-		'depends' => array('yiimetroui','yii'),
+		'depends' => array('yiimetroui','yii'), 
 	),
 	'yiimetroui/accordion' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'js' => array(
 			'js/accordion.js',
 		),
-		'depends' => array('yiimetroui'),
+		'depends' => array('yiimetroui','yii'),
 	)
 );
