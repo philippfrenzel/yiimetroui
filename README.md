@@ -12,3 +12,9 @@ developers which are in my opinion well skilled! :)
 If you have questions, feel free to contact me!
 
 philipp at frenzel dot net
+
+installation
+============
+
+Add the following line to your index.php in /www
+Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/yiiext/yiimetroui/yiimetroui/');
