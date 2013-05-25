@@ -48,10 +48,31 @@ Add the following line to your index.php in /www
 
 ```php
 Yii::setAlias('@yiimetroui', __DIR__ . '/../vendor/yiiext/yiimetroui/yiimetroui/');
-```
+``
 
 USAGE
 =====
+
+Accordion (Collapse)
+====================
+
+Put the code below into your view file and enjoy it!
+
+```php
+use yiimetroui\Accordion;
+
+echo Accordion::widget(array(
+	'Accordion Group Label'=>array(
+			// required, the content (HTML) of the group
+			'content'=>'Anim pariatur cliche...',
+			// optional the HTML attributes of the content group
+	       'contentOptions'=> array(),
+	       // optional the HTML attributes of the group
+	       'options'=> array(),
+		),
+	)
+));
+```
 
 Carousel
 ========
@@ -59,7 +80,7 @@ Carousel
 Put the code below into your view file and enjoy it!
 
 ```php
-use yiimetroui\carousel;
+use yiimetroui\Carousel;
 
 echo Carousel::widget(array(
 	'items'=>array(
