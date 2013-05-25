@@ -134,3 +134,22 @@ echo Tabs::widget(array(
      ),
 ));
 ```
+
+Tiles
+=====
+
+Put the code below into your view file and enjoy it!
+
+```php
+use yiimetroui\Tile;
+
+echo Tile::widget(array(
+    'items'=>array(
+        array(
+            'content'=>'<i class="icon-github"></i>',
+            'brand'=>'<div class="name">Frenzel.NET</div>',                    
+        ),
+    ),
+    'options'=>array('class'=>'icon bg-color-green'),
+));
+```
