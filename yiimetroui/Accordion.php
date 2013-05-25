@@ -78,7 +78,7 @@ class Accordion extends Widget
 		echo Html::beginTag('div', $this->options) . "\n";
 		echo $this->renderItems() . "\n";
 		echo Html::endTag('div') . "\n";
-		$this->registerPlugin('Accordion');
+		$this->registerPlugin('accordion');
 	}
 
 	/**
