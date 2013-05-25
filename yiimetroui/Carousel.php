@@ -36,6 +36,16 @@ use yii\helpers\Html;
  *     )
  * ));
  * ```
+ * PARAMETERS
+ *    auto - auto start carousel sliding (default: true)
+ *    period - slide change period (default: 6000)
+ *    duration - effect duration period (default: 1000)
+ *    effect - animation effect. available: slide, fade, slowdown, switch (default: slide)
+ *    direction - animation direction. available: left, right (default: left)
+ *    markers - on|off slide markers (default: on)
+ *    arrows - on|off slide arrows (default: on)
+ *    stop - on|off slide animation on mouse over (default: on)
+ *
  *
  */
 class Carousel extends Widget
@@ -79,28 +89,10 @@ class Carousel extends Widget
 	public function run()
 	{
 		echo Html::beginTag('div', $this->options) . "\n";
-		echo $this->renderIndicators() . "\n";
 		echo $this->renderItems() . "\n";
 		echo $this->renderControls() . "\n";
 		echo Html::endTag('div') . "\n";
 		$this->registerPlugin('carousel');
-	}
-
-	/**
-	 * Renders carousel indicators.
-	 * @return string the rendering result
-	 */
-	public function renderIndicators()
-	{
-		$indicators = array();
-		for ($i = 0, $count = count($this->items); $i < $count; $i++) {
-			$options = array('data-target' => '#' . $this->options['id'], 'data-slide-to' => $i);
-			if ($i === 0) {
-				$this->addCssClass($options, 'active');
-			}
-			$indicators[] = Html::tag('li', '', $options);
-		}
-		return Html::tag('ol', implode("\n", $indicators), array('class' => 'carousel-indicators'));
 	}
 
 	/**
@@ -113,7 +105,7 @@ class Carousel extends Widget
 		for ($i = 0, $count = count($this->items); $i < $count; $i++) {
 			$items[] = $this->renderItem($this->items[$i], $i);
 		}
-		return Html::tag('div', implode("\n", $items), array('class' => 'carousel-inner'));
+		return Html::tag('div', implode("\n", $items), array('class' => 'slides'));
 	}
 
 	/**
@@ -133,7 +125,7 @@ class Carousel extends Widget
 			$content = $item['content'];
 			$caption = ArrayHelper::getValue($item, 'caption');
 			if ($caption !== null) {
-				$caption = Html::tag('div', $caption, array('class' => 'carousel-caption'));
+				$caption = Html::tag('div', $caption, array('class' => 'description'));
 			}
 			$options = ArrayHelper::getValue($item, 'options', array());
 		} else {
@@ -155,13 +147,11 @@ class Carousel extends Widget
 	public function renderControls()
 	{
 		if (isset($this->controls[0], $this->controls[1])) {
-			return Html::a($this->controls[0], '#' . $this->options['id'], array(
-				'class' => 'left carousel-control',
-				'data-slide' => 'prev',
+			return Html::div($this->controls[0], '#' . $this->options['id'], array(
+				'class' => 'control left',				
 			)) . "\n"
-			. Html::a($this->controls[1], '#' . $this->options['id'], array(
-				'class' => 'right carousel-control',
-				'data-slide' => 'next',
+			. Html::div($this->controls[1], '#' . $this->options['id'], array(
+				'class' => 'control right',				
 			));
 		} elseif ($this->controls === false) {
 			return '';
