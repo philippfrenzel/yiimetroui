@@ -113,7 +113,7 @@ class Tile extends Widget
 			$id = $this->options['id'] . '-tile' . $index;
 			$options = ArrayHelper::getValue($item, 'contentOptions', array());
 			$options['id'] = $id;
-			$content = Html::tag('div', $item['content'], array($options)) . "\n";
+			$content = Html::tag('div', $item['content'], $options) . "\n";
 		} else {
 			throw new InvalidConfigException('The "content" option is required.');
 		}
