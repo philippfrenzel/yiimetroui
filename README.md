@@ -41,6 +41,8 @@ Add the sources to your composer.json > repositories file:
 }
 ```
 
+Package is although registered at packagist.org - so you can just add one line of code, to let it run!
+
 MetroUI already loaded?
 - As I use assetparser extension to parse the less files into my distribution, i commented the assets.php to avoid static css loading. If you need the css-files to be loaded statically, pls. uncomment the entries!
 
@@ -96,5 +98,27 @@ echo Carousel::widget(array(
 	'options'=>array(
 		'style'=>'height:200px',
 	)
+));
+```
+
+Tabs
+====
+
+Put the code below into your view file and enjoy it!
+
+```php
+echo Tabs::widget(array(
+     'items' => array(
+         array(
+             'header' => 'One',
+             'content' => 'Mauris mauris ante, blandit et, ultrices a, suscipit eget...',
+         ),
+         array(
+             'header' => 'Two',
+             'headerOptions' => array(...),
+             'content' => 'Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus...',
+             'options' => array(...),
+         ),
+     ),
 ));
 ```

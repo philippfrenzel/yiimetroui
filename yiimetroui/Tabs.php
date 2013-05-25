@@ -77,7 +77,7 @@ class Tabs extends Widget
 		echo $this->renderHeaders() . "\n";
 		echo $this->renderContents() . "\n";
 		echo Html::endTag('div') . "\n";
-		$this->registerPlugin('accordion');
+		$this->registerPlugin('tabs');
 	}
 
 	/**
