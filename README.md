@@ -51,6 +51,14 @@ Package is although registered at packagist.org - so you can just add one line o
 },
 ```
 
+IMPORTANT:
+
+add class="metrouicss" to your body
+
+```html
+<body class="metrouicss">
+```
+
 MetroUI already loaded?
 - As I use assetparser extension to parse the less files into my distribution, i commented the assets.php to avoid static css loading. If you need the css-files to be loaded statically, pls. uncomment the entries!
 

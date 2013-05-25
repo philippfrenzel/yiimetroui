@@ -4,13 +4,13 @@ return array(
 	'yiimetroui' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'css' => array(
-			//'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
+			'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
 		),
 	),
 	'yiimetroui/responsive' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'css' => array(
-			//'css/modern-responsive.css', //uncomment this, if you don't use the modern.css already in your allication
+			'css/modern-responsive.css', //uncomment this, if you don't use the modern.css already in your allication
 		),
 		'depends' => array('yiimetroui'),
 	),
