@@ -91,9 +91,7 @@ class Tile extends Widget
 		$items = array();
 		$index = 0;
 		for ($i = 0, $count = count($this->items); $i < $count; $i++) {
-			$options = ArrayHelper::getValue($item, 'options', array());
-			$this->addCssClass($options, 'tile-content');
-			$items[] = Html::tag('div', $this->renderItem($this->items[$i], $i), $options);
+			$items[] = $this->renderItem($this->items[$i], $i);
 		}
 
 		return implode("\n", $items);
@@ -113,6 +111,7 @@ class Tile extends Widget
 			$id = $this->options['id'] . '-tile' . $index;
 			$options = ArrayHelper::getValue($item, 'contentOptions', array());
 			$options['id'] = $id;
+			$this->addCssClass($options, 'tile-content');			
 			$content = Html::tag('div', $item['content'], $options) . "\n";
 		} else {
 			throw new InvalidConfigException('The "content" option is required.');
