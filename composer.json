@@ -1,7 +1,7 @@
 {
     "name": "philippfrenzel/yiimetroui",
-    "description": "Yii2 DHTMLX Widgets",
-    "keywords": ["yii", "framework","metroui"],
+    "description": "Yii2 MetroUI Widget Extension",
+    "keywords": ["yii","extension","metroui"],
     "homepage": "http://www.frenzel.net/",
     "type": "library",
     "license": "BSD-3-Clause",
