@@ -91,6 +91,18 @@ class Notice extends Widget
 	public function renderItem($item, $index)
 	{
 		$group = array();
+		if (isset($item['icon'])) {
+			$headerId = $this->options['id'] . '-notice-icon' . $index;
+			$group[] = Html::tag('div', $item['icon'], array('class'=>'notice-icon','id'=>$headerId)) . "\n";
+		}
+		if (isset($item['image'])) {
+			$headerId = $this->options['id'] . '-notice-image' . $index;
+			$group[] = Html::tag('div', $item['image'], array('class'=>'notice-image','id'=>$headerId)) . "\n";
+		}
+		if (isset($item['header'])) {
+			$headerId = $this->options['id'] . '-notice-header' . $index;
+			$group[] = Html::tag('div', $item['header'], array('class'=>'notice-header','id'=>$headerId)) . "\n";
+		}
 		if (isset($item['content'])) {
 			//the close button
 			$group[] = Html::tag('a', '', array('class'=>'close','href'=>'#')) . "\n";
@@ -103,18 +115,9 @@ class Notice extends Widget
 		} else {
 			throw new InvalidConfigException('The "content" option is required.');
 		}
-		if (isset($item['header'])) {
-			$headerId = $this->options['id'] . '-notice-header' . $index;
-			$group[] = Html::tag('div', $item['header'], array('class'=>'notice-header','id'=>$headerId)) . "\n";
-		}
-		if (isset($item['image'])) {
-			$headerId = $this->options['id'] . '-notice-image' . $index;
-			$group[] = Html::tag('div', $item['image'], array('class'=>'notice-image','id'=>$headerId)) . "\n";
-		}
-		if (isset($item['icon'])) {
-			$headerId = $this->options['id'] . '-notice-icon' . $index;
-			$group[] = Html::tag('div', $item['icon'], array('class'=>'notice-icon','id'=>$headerId)) . "\n";
-		}
+		
+		
+		
 
 		return implode("\n", $group);
 	}
