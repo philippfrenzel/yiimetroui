@@ -93,7 +93,7 @@ class Notice extends Widget
 		$group = array();
 		if (isset($item['content'])) {
 			//the close button
-			$group[] = Html::tag('a', '', array('class'=>'close','href'='#')) . "\n";
+			$group[] = Html::tag('a', '', array('class'=>'close','href'=>'#')) . "\n";
 
 			$id = $this->options['id'] . '-notice' . $index;
 			$options = ArrayHelper::getValue($item, 'contentOptions', array());
