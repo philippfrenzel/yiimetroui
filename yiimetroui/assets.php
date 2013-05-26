@@ -7,6 +7,8 @@ return array(
 			//'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
 			'css/jquery-ui.css',
 		),
+		'image'=>array(
+		),
 	),
 	'yiimetroui/responsive' => array(
 		'sourcePath' => __DIR__ . '/assets',
