@@ -42,5 +42,12 @@ return array(
 			'js/tile-drag.js',
 		),
 		'depends' => array('yiimetroui','yii'),
+	),
+	'yiimetroui/notice' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/tile-drag.js',
+		),
+		'depends' => array('yiimetroui','yii'),
 	)
 );
