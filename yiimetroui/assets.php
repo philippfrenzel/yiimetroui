@@ -5,6 +5,8 @@ return array(
 		'sourcePath' => __DIR__ . '/assets',
 		'css' => array(
 			'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
+			//'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
+			'css/jquery-ui.css',
 		),
 	),
 	'yiimetroui/responsive' => array(
@@ -36,6 +38,13 @@ return array(
 		'depends' => array('yiimetroui','yii'),
 	),
 	'yiimetroui/tile' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/tile-drag.js',
+		),
+		'depends' => array('yiimetroui','yii'),
+	),
+	'yiimetroui/notice' => array(
 		'sourcePath' => __DIR__ . '/assets',
 		'js' => array(
 			'js/tile-drag.js',
