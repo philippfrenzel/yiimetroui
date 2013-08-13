@@ -59,10 +59,16 @@ class Widget extends BaseWidget
 	*/
 	protected function registerPlugin($name)
 	{
+		//for the js object generation, the first letter needs to be in upper case
+		$name = ucfirst($name);
+
 		$id = $this->options['id'];
 		$view = $this->getView();
-		$view->registerAssetBundle("yiimetroui/$name");
-		
+
+		/** @var \yii\web\AssetBundle $assetClass */
+		$assetClass = 'yiimetroui\\' . $name.'Asset';
+		$assetClass::register($view);
+
 		if (!empty($this->clientEvents)) {
 			$js = array();
 			foreach ($this->clientEvents as $event => $handler) {
