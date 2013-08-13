@@ -1591,6 +1591,7 @@ a.shortcut .label {
   background-color: #e5e5e5;
 }
 .page-sidebar ul {
+  padding-left: 5px;
   margin-left: 0;
   list-style: none;
   background-color: #EBEBEB;
