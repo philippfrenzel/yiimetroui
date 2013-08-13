@@ -756,32 +756,14 @@ a [class*=" icon-"] {
 }
 a [class^="icon-"],
 a [class*=" icon-"],
-button [class^="icon-"],
-button [class*=" icon-"],
-.button [class^="icon-"],
-.button [class*=" icon-"],
-.page-control > ul > li [class^="icon-"],
-.page-control > ul > li [class*=" icon-"] {
-  vertical-align: -10%;
-  font-size: 1.2em;
-  display: inline-block;
-}
 a [class^="icon-"].icon-large,
 a [class*=" icon-"].icon-large,
-button [class^="icon-"].icon-large,
-button [class*=" icon-"].icon-large,
-.button [class^="icon-"].icon-large,
-.button [class*=" icon-"].icon-large,
 .page-control > ul > li [class^="icon-"].icon-large,
 .page-control > ul > li [class*=" icon-"].icon-large {
   line-height: .9em;
 }
 a.big [class^="icon-"],
 a.big [class*=" icon-"],
-button.big [class^="icon-"],
-button.big [class*=" icon-"],
-.button.big [class^="icon-"],
-.button.big [class*=" icon-"],
 .page-control > ul > li.big [class^="icon-"],
 .page-control > ul > li.big [class*=" icon-"] {
   font-size: 1.33333333333em;
@@ -834,20 +816,12 @@ ol.icons li [class*=" icon-"] {
 }
 a [class^="icon-"],
 a [class*=" icon-"],
-button [class^="icon-"],
-button [class*=" icon-"],
-.button [class^="icon-"],
-.button [class*=" icon-"],
 .page-control > ul > li [class^="icon-"],
 .page-control > ul > li [class*=" icon-"] {
   margin-right: 5px;
 }
 a [class^="icon-"].right,
 a [class*=" icon-"].right,
-button [class^="icon-"].right,
-button [class*=" icon-"].right,
-.button [class^="icon-"].right,
-.button [class*=" icon-"].right,
 .page-control > ul > li [class^="icon-"].right,
 .page-control > ul > li [class*=" icon-"].right {
   margin-left: 5px;
@@ -4487,137 +4461,6 @@ a.shortcut .label {
   position: absolute;
   right: -5px;
   top: 5px;
-}
-.dialog .header button {
-  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 9pt;
-  font-smooth: always;
-  line-height: 11pt;
-  font-size: 14px;
-  display: inline-block;
-  padding: 4px 12px;
-  line-height: 20px;
-  text-align: center;
-  vertical-align: middle !important;
-  min-width: 90px;
-  min-height: 32px;
-  height: 32px;
-  background-color: #ccc;
-  border: 1px transparent solid;
-  color: #353535;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border-raduis: 0;
-  cursor: pointer;
-  width: auto;
-  *zoom: 1;
-  min-width: 32px;
-  min-height: 32px;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  position: relative;
-  padding: 0;
-  width: 24px !important;
-  height: 24px !important;
-  min-height: 24px;
-  min-width: 24px;
-}
-.dialog .header button.mini {
-  min-height: 20px;
-  min-width: 20px;
-  height: 14px;
-  font-size: .75em !important;
-  padding-top: 0px !important;
-}
-.dialog .header button.big {
-  min-height: 48px;
-  height: 48px;
-  font-size: 1.2em;
-}
-.dialog .header button.mini {
-  min-width: 22px;
-  width: 22px;
-}
-.dialog .header button.big {
-  min-width: 48px;
-  width: 48px;
-}
-.dialog .header button [class^="icon-"],
-.dialog .header button [class*=" icon-"] {
-  vertical-align: -10%;
-  font-size: 1.2em;
-  display: inline-block;
-}
-.dialog .header button [class^="icon-"].icon-large,
-.dialog .header button [class*=" icon-"].icon-large {
-  line-height: .9em;
-}
-.dialog .header button.big [class^="icon-"],
-.dialog .header button.big [class*=" icon-"] {
-  font-size: 1.33333333333em;
-}
-.dialog .header button [class^="icon-"],
-.dialog .header button [class*=" icon-"] {
-  margin-right: 5px;
-}
-.dialog .header button [class^="icon-"].right,
-.dialog .header button [class*=" icon-"].right {
-  margin-left: 5px;
-  margin-right: auto;
-}
-.dialog .header button:before,
-.dialog .header button:after {
-  display: table;
-  content: "";
-}
-.dialog .header button:after {
-  clear: both;
-}
-.dialog .header button.standart {
-  min-width: 90px;
-  min-height: 32px;
-}
-.dialog .header button:active,
-.dialog .header button.default:active {
-  top: 1px;
-  left: 1px;
-}
-.dialog .header button:disabled,
-.dialog .header button.disabled {
-  background-color: #eaeaea;
-  color: #bebebe;
-  cursor: not-allowed;
-}
-.dialog .header button.default {
-  background-color: #008287;
-  color: #fff;
-}
-.dialog .header button:focus {
-  outline: 0;
-  border: 1px #353535 dotted;
-}
-.dialog .header button.mini {
-  min-height: 20px;
-  min-width: 20px;
-  height: 14px;
-  font-size: .75em !important;
-  padding-top: 0px !important;
-}
-.dialog .header button.big {
-  min-height: 48px;
-  height: 48px;
-  font-size: 1.2em;
-}
-.dialog .header button img {
-  width: 16px;
-  height: 16px;
-  top: 8px;
-}
-.dialog .header button [class^="icon-"],
-.dialog .header button [class*=" icon-"] {
-  font-size: 11px;
 }
 .dialog .content {
   min-height: 85px;
