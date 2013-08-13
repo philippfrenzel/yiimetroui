@@ -6,7 +6,7 @@ return array(
 		'css' => array(
 			'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
 			//'css/modern.css', //uncomment this, if you don't use the modern.css already in your allication
-			'css/jquery-ui.css',
+			'css/jquery-ui.css', //removed it, as it's crashing the styles to much!
 		),
 	),
 	'yiimetroui/responsive' => array(
@@ -48,6 +48,13 @@ return array(
 		'sourcePath' => __DIR__ . '/assets',
 		'js' => array(
 			'js/tile-drag.js',
+		),
+		'depends' => array('yiimetroui','yii'),
+	),
+	'yiimetroui/dialog' => array(
+		'sourcePath' => __DIR__ . '/assets',
+		'js' => array(
+			'js/dialog.js',
 		),
 		'depends' => array('yiimetroui','yii'),
 	)
