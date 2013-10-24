@@ -23,5 +23,8 @@
     },
     "autoload": {
         "psr-0": { "yiimetroui\\": "/" }
-    }
+    },
+    "extra": {
+          "bootstrap": "yiimetroui\\Extension"
+  }
 }
