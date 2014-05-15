@@ -21,10 +21,12 @@ class Widget extends BaseWidget
 	 * @var string the yiimetroui theme bundle.
 	 */
 	public static $theme = NULL;
+	
 	/**
 	 * @var array the HTML attributes for the widget container tag.
 	 */
 	public $options = array();
+	
 	/**
 	 * @var array the options for the underlying jQuery UI widget.
 	 * Please refer to the corresponding jQuery UI widget Web page for possible options.
@@ -32,6 +34,7 @@ class Widget extends BaseWidget
 	 * how to use the "Accordion" widget and the supported options (e.g. "header").
 	 */
 	public $clientOptions = array();
+	
 	/**
 	 * @var array the event handlers for the underlying jQuery UI widget.
 	 * Please refer to the corresponding jQuery UI widget Web page for possible events.
@@ -40,7 +43,6 @@ class Widget extends BaseWidget
 	 */
 	public $clientEvents = array();
 
-
 	/**
 	 * Initializes the widget.
 	 * If you override this method, make sure you call the parent implementation first.
@@ -48,6 +50,11 @@ class Widget extends BaseWidget
 	public function init()
 	{
 		parent::init();
+		
+		$this->setAliases([
+        '@yiimetroui' => dirname(__FILE__)
+    ]);
+
 		if (!isset($this->options['id'])) {
 			$this->options['id'] = $this->getId();
 		}
