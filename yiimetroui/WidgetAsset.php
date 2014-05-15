@@ -11,11 +11,12 @@ use yii\web\AssetBundle;
 class WidgetAsset extends AssetBundle
 {
     public $sourcePath = '@yiimetroui/assets';
-    public $css = array(
+    
+    public $css = [
     	'css/modern.css'
-    );
-    public $js = array( 
-    );
-    public $depends = array(
-    );
+    ];
+    
+    public $js = [];
+    
+    public $depends = [];
 }
