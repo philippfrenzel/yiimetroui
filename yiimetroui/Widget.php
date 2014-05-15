@@ -51,7 +51,7 @@ class Widget extends BaseWidget
 	{
 		parent::init();
 		
-		$this->setAliases([
+		\Yii::$app->setAliases([
         '@yiimetroui' => dirname(__FILE__)
     ]);
 
